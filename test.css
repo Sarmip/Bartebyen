@@ -1,0 +1,640 @@
+html, body{
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body{
+  font-family: 'Armata', sans-serif;
+  font-size: 1em;
+  background-color:#F5F5F5;
+  color: #202020;
+  margin: 0;
+  padding: 0;
+}
+
+/*forside*/
+.bildetekst{
+  /*position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  font-size: 48px;
+  opacity: 0.7;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px black;*/
+
+  position: relative;
+  left: 70%;
+  transform: translate(-50%, -500%);
+  z-index: 50;
+  font-size: 48px;
+  opacity: 0.7;
+  color: #FFFFFF;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px black;
+}
+
+.tekst{
+  font-size: 16px;
+  line-height: 1.5;
+  width: 95%;
+  margin: 2% auto 5%;
+  margin-bottom: 20%;
+}
+
+.forsidebildet{
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+/*navbar*/
+#mobile_menu {
+  display: none;
+  margin-top: 50px;
+  float: right;
+  text-align: right;
+  width: 100%;
+  z-index: 100;
+  background: #EDEDED;
+}
+
+.nav a {
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+  color: black;
+  text-transform: uppercase;
+}
+
+.nav ul{
+  list-style: none;
+}
+
+.nav a.icon {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 30px;
+  background: #EDEDED;
+}
+
+#logo{
+  float: left;
+  position: absolute;
+  margin-left: 8px;
+  margin-top:-8px; /*lagt til*/
+  width: 90px;
+  float: left;
+}
+
+header{
+background: #EDEDED;
+height: 80px;
+}
+
+
+/*PAKKETILBUD*/
+.pakketilbud{
+  display: block;
+}
+
+.contentpakke{
+  padding: 60px;
+}
+
+.imgpakketilbud{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.headerpakke{
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-size: 2em;
+}
+
+.bestill{
+  letter-spacing: 2px;
+  padding: 1em;
+  border:1px;
+  background:#030303;
+  color: #F5F5F5;
+  padding:1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  float:right;
+}
+
+.bestill:hover{
+  padding: 1em;
+}
+
+/*TIPS*/
+
+#tips_innledning {
+  display: block !important; /*alltid vises*/
+  padding-bottom: 0px;
+}
+
+.header_tips{
+  padding-bottom: 20px;
+  padding-top: 10px;
+  font-size: 2em;
+  display: block;
+}
+
+.content_tips{
+    padding: 60px;
+    padding-top: 0;
+}
+
+/*FOOTER*/
+.site-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh
+}
+
+.site-content{
+  flex: 1;
+}
+
+footer{
+  background-color: #EDEDED;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;;
+  width: 100vw;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#logofooter{
+  order:1;
+  width: 100px;
+  position: relative;
+  top: -85px;
+  max-height: 100px;
+  left: -7px;
+}
+
+.adresse{
+  width: 150px;
+  order: 2;
+  font-size: 12px;
+  margin-top: 35px;
+  line-height: 18px;
+  margin-right: 7px;
+}
+
+.kontakt{
+  width: 150px;
+  font-size: 12px;
+  margin-top: 35px;
+  line-height: 18px;
+  margin-left: 7px;
+}
+
+/*KONTAKT*/
+h2{
+  font-size: 3em;
+  font-weight: 800;
+}
+
+#contentkontakt{
+  display: inline-block;
+  padding: 10%;
+}
+
+#kontakt_om_oss{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#kontor{
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+#adresse{
+  order: 2;
+}
+
+/* BESTILLING */
+.bestill_body{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#bekreftelse {
+  /*display: none;*/
+  background-color: black;
+  color: white;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
+
+#bestill_link {
+  font-weight: bold;
+  text-decoration: none;
+  transition: font-size 0.3s ease-out;
+  color: #151515;
+}
+
+#bestill_link:hover {
+  font-size: larger
+}
+
+#pakkelink:visited {
+  color: inherit;
+}
+
+#tips_valg, .bestill_select select { /* Dropdown */
+  background: white;
+  padding: 10px;
+  font-size: 1em;
+  font-family: 'Armata', sans-serif;
+}
+
+#bestill_select select{
+  width: 90%;
+}
+
+.boks { /* Blir mer mellomrom mellom input */
+  margin: 15px 0px 10px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bestill_innledning {
+  margin-bottom: 30px;
+  display: block;
+}
+
+.bestill_labels {
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 70%;
+}
+
+.bestill_input { /* Alle input */
+  width: 90%;
+  background: white;
+  font-size: 1em;
+  font-family: 'Armata', sans-serif;
+  padding: 10px;
+  border: 1px #D9D9D9 solid;
+}
+
+#kommentar {
+  height: 100px;
+  resize: none;
+}
+
+#bestill_knapp{
+  width: 100%;
+  float: left;
+}
+
+/*GALLERI*/
+.column img{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+#row{
+  padding-bottom: 50px;
+}
+
+#tiltoppen{
+  visibility: hidden;
+}
+
+@media only screen and (min-width: 650px) {
+  .imgpakketilbud{
+    width: 100%;
+    height: 700px;
+  }
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 900px) {
+  body{
+    font-family: 'Armata', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*FORSIDE*/
+  #p1{
+    float: left;
+    width: 45%;
+  }
+
+  #p2{
+    float: right;
+    width: 45%;
+  }
+
+  .tekst{
+    font-size: 16px;
+    line-height: 1.5;
+    width: 95%;
+    margin: 2% auto 5%;
+    margin-bottom: 35%;
+  }
+  /* container til slideshow*/
+  .slideshow-container {
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .mySlides {
+    display: none; /* gjemmer bildene til defualt */
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+
+  .forsidebildet{
+    height: 500px;
+    width: 100%;
+  }
+
+  @keyframes fade { /*bildene skal ha en fading overgang*/
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .bildetekst{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    font-size: 90px;
+    opacity: 0.7;
+    color: #FFFFFF;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 30px;
+    font-weight: bold;
+    text-shadow: 1px 1px 10px black;
+  }
+
+  /*PAKKETILBUD*/
+  .pakketilbud{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   padding-right: 10%;
+   padding-left: 10%;
+  }
+
+  #img_samfundet{
+    width: 500px;
+    height:inherit;
+    padding-left: 30px;
+  }
+
+  #header_samfundet{
+    flex-wrap: wrap;
+    word-wrap: break-word;
+  }
+
+  .imgpakketilbud{
+    width: 500px;
+    height:700px;
+    object-fit: cover;
+    padding: 30px;
+  }
+
+  .contentpakke{
+    padding: 40px;
+    margin: 30px;
+  }
+
+  .headerpakke{
+    font-size: 200%;
+    padding-bottom: 10px;
+    padding-top: 60px;
+    width: 300px;
+  }
+
+  .bestill{
+    transition: padding 0.3s ease-out;
+  }
+
+  .bestill:hover{
+    padding: 1.2em;
+  }
+
+  /*OM OSS*/
+  #contentkontakt{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10%;
+  }
+
+  #bildediv{
+    margin: auto;
+    overflow: hidden;
+
+  }
+  #kontor{
+    margin-top: 10%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  /*GALLERI*/
+
+  /*  Lager tre like kolonner som sitter på rekke med hverandre.
+      Bruker flexbox til dette. */
+  #row {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .column {
+    flex: 31%;
+    max-width: 31%;
+  }
+
+  .column img {
+    flex-direction: column;
+    transition: transform 0.3s ease-out; /* Bruker 0.3 sekunder på å forstørres. */
+  }
+
+  .img_galleri:hover{
+    transform: scale(1.3); /* Bildene forstørres 1.3 ganger når pila hovrer over de. */
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 10px 20px darkgrey; /* Legger på skyggeeffekt. */
+  }
+
+  /* TIL-TOPPEN-KNAPP */
+
+  /* W3 school-link:https://www.w3schools.com/howto/howto_js_scroll_to_top.asp*/
+  #tiltoppen{
+    visibility: visible;
+    position: fixed; /* Knappen skal alltid være tilgjengelig på skjermen, nederst til høyre. */
+    bottom: 20px;
+    right: 35px;
+    z-index: 1000; /* For å være sikker på at knappen går foran alt annet innhold. */
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 15px 8px 15px;
+    border-radius: 50px;
+    font-size: 18px;
+    box-shadow: 4px 4px 8px darkgrey;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  #tiltoppen:hover{
+    background-color: orange;
+  }
+
+  /*navbar*/
+  header{
+  background: #EDEDED;
+  width:100vw;
+  margin: 0 auto;
+  font-size:25px;
+  box-shadow: 5px 5px 10px lightgrey;
+  }
+
+  #logo{
+    float: left;
+    position: absolute;
+    margin-left: 20px;
+    width: 200px;
+    margin-top:-12px;
+    z-index: 10;
+  }
+
+  .nav{
+    height: 80px;
+  }
+
+  .nav ul{
+    margin:0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    margin-left: 80px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 200px;
+  }
+
+  #mobile_menu{
+    display: inline-block;
+    margin-top: 0%;
+    width: 100%;
+    float: none;
+    margin: auto;
+    text-align: center;
+  }
+
+  .nav li{
+    margin-top: -12px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .nav a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .nav li:hover {
+    border-bottom: solid 2px #444;
+    font-weight: bold;
+    color: grey;
+  }
+
+  a:visited {
+    font-weight: bold;
+  }
+
+  .nav:hover{
+    color: #000;
+  }
+
+  .nav a.icon {
+    display: none;
+  }
+
+  /*footer*/
+  footer{
+    padding: 10px;
+    width:100vw;
+  }
+
+  #logofooter{
+    width: 150px;
+    max-height: 150px;
+  }
+
+  .wrapper_footer{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  /*TIPS*/
+
+  .header_tips{
+    font-size: 200%;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    width: 300px;
+  }
+
+  .content_tips{
+    padding-top: 0px;
+  }
+
+  /* BESTILLING */
+
+  .bestill_body{
+    margin: 10%;
+    margin-bottom: 15%;
+
+  }
+
+  #bestill_info{
+    margin-top: 0px;
+  }
+}

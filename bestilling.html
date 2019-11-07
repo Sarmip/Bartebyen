@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no" dir="ltr">
+<head>
+  <title>Bestilling</title>
+  <link rel="icon" href="img/icon.gif" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Armata&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/test.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+    <body>
+      <div class="wrapper_footer">
+      <div class="bestill_body">
+        <div class="bestill_innledning">
+            <h1 id="bestill_h1">Bestilling</h1>
+            <p id="bestill_info">Usikker på hvilke pakketilbud du skal velge? Les mer om dem <a href="pakketilbud.html" id="bestill_link">HER.</a></p>
+        </div>
+        <!--<button onclick="document.getElementById('pakketilbud').value=750;"> Prøv meg </button>-->
+
+        <form onsubmit="return bekreftelse()" id="bestill_skjema">
+          <label for="pakketilbud" class="bestill_labels">Velg pakketilbud:</label>
+            <div class="bestill_select" id="bestill_select">
+              <select id="pakketilbud" onchange="visPris()" required>
+                  <option value="" selected disabled>Velg pakketilbud</option>
+                  <option id="pakketilbud1" value=670>Baristakurs</option>
+                  <option id="pakketilbud2" value=750>Byvandring</option>
+                  <option id="pakketilbud3" value=400>Fotosafari</option>
+                  <option id="pakketilbud4" value=2300>Hyttetur</option>
+                  <option id="pakketilbud5" value=300>Nidarosdomen</option>
+              </select>
+            </div>
+
+            <div id="alle_input">
+
+              <div class="boks">
+                <label for="dato" class="bestill_labels">Dato:</label>
+                <input type="date" class="bestill_input" name="dato" id="dato" required>
+              </div>
+
+              <div class="boks">
+                <label for="deltakere" class="bestill_labels">Antall deltakere:</label>
+                <input type="number" class="bestill_input" name="deltakere" id="deltakere" min="1" onchange="visPris()" required>
+              </div>
+
+              <div class="boks">
+                <label for="pris" class="bestill_labels">Pris:</label>
+                <input type="text" class="bestill_input" id="pris" name="pris" disabled>
+              </div>
+
+              <div class="boks">
+                <label for="navn" class="bestill_labels">Navn:</label>
+                <input type="text" name="navn" class="bestill_input" id="navn" pattern="^[A-Za-zæøåÆØÅ\s-]*$" required>
+              </div>
+
+              <div class="boks">
+                <label for="epost" class="bestill_labels">E-post:</label>
+                <input type="email" class="bestill_input" name="epost" id="epost" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" onkeyup="visMail()" required>
+              </div>
+
+              <div class="boks">
+                <label for="telefonnr" class="bestill_labels">Telefonnummer:</label>
+                <input type="text" class="bestill_input" name="telefonnr" id="telefonnr" pattern="^[0-9]*$" required>
+              </div>
+
+              <div class="boks">
+                <label for="kommentar" class="bestill_labels">Andre kommentarer:</label>
+                <textarea class="bestill_input" placeholder="Allergier o.l." id="kommentar"></textarea>
+              </div>
+
+
+                <input type="submit" class="bestill" id="bestill_knapp" value="Bekreft bestilling">
+                <div id="bekreftelse" class="bekrefttekst">
+                    <h3>Takk for din bestilling!</h3>
+                    <p>Du vil snart få en mail <span id="brukermail">fra oss</span>.</p> <p>Ha en fin dag videre!</p>
+              </div>
+          </div>
+        </form>
+        </div>
+        <script src="js/bestilling.js"></script>
+        <script src="js/navbar.js"></script>
+        <script src="js/tiltoppen.js"></script>
+        <script src="js/footer.js"></script>
+        </div>
+    </body>
+</html>
